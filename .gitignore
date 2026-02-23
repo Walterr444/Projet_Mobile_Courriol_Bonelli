@@ -1,0 +1,21 @@
+# PocketBase
+server/pb_data/
+server/pocketbase.exe
+server/*.db-shm
+server/*.db-wal
+
+# Flutter
+# (Standard Flutter gitignore should be inside app/ already, but adding it here doesn't hurt)
+app/.dart_tool/
+app/.flutter-plugins
+app/.flutter-plugins-dependencies
+app/.packages
+app/build/
+app/.pub-cache/
+app/.pub/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.pico
