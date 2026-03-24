@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:rappels_app/models/rappel.dart';
-import 'package:rappels_app/services/pocketbase_service.dart';
+import 'package:rappels_app/services/auth_service.dart';
 
 /// ChangeNotifier qui vérifie si un produit (via son GTIN/code-barres)
 /// a un rappel en cours dans PocketBase.
@@ -8,7 +8,7 @@ import 'package:rappels_app/services/pocketbase_service.dart';
 /// Utilisation : injecter ce notifier et appeler checkRappel(gtin)
 /// L'UI se met à jour automatiquement lorsque hasRappel change.
 class RappelNotifier extends ChangeNotifier {
-  final _pb = PocketBaseService.instance.pb;
+  final _pb = AuthService.instance.pb;
 
   bool _isLoading = false;
   bool _hasRappel = false;
